@@ -14,9 +14,11 @@ import service.SuccesskillService;
 @RequestMapping("/successKilled")
 public class SuccessKilledController {
 
-      private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-      @Autowired
-      private SuccesskillService successkillService;
+    @Autowired
+    private SuccesskillService successkillService;
+
+
 
 }
