@@ -42,4 +42,6 @@ public class SeckillController {
         model.addAttribute("seckill",secKill);
         return "detail";
     }
+
+
 }
