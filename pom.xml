@@ -118,6 +118,18 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.4.3</version>
         </dependency>
+
+        <!--netty测试-->
+        <dependency>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>3.2.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.29.Final</version>
+        </dependency>
     </dependencies>
 
 </project>
