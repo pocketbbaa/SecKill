@@ -26,15 +26,12 @@ public class SuccessKillServiceImpl implements SuccesskillService {
     public boolean addSuccessKill(long seckillId, long userPhone, Date createTime) {
 
         createTime = new Date();
-        int count = successKillDao.add(seckillId,userPhone,createTime);
-        if(count >= 0){
-            return true;
-        }
-        return false;
+        int count = successKillDao.add(seckillId, userPhone, createTime);
+        return (count >= 0);
     }
 
     @Override
     public SuccessKilled getSuccesskillById(long seckillId, long userPhone) {
-        return successKillDao.queryById(seckillId,userPhone);
+        return successKillDao.queryById(seckillId, userPhone);
     }
 }

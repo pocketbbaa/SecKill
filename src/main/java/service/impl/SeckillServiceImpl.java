@@ -68,8 +68,7 @@ public class SeckillServiceImpl implements SeckillService {
     //创建MD5密文
     private String getMD5(long seckillId) {
         String base = seckillId + "/" + slat;
-        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
-        return md5;
+        return DigestUtils.md5DigestAsHex(base.getBytes());
     }
 
     @Override

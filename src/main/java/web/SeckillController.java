@@ -44,7 +44,7 @@ public class SeckillController {
         }
         SecKill secKill = seckillService.getById(seckillId);
         if (secKill == null) {
-            return "forward:/seckill/list";
+            return "forward:/list";
         }
         model.addAttribute("seckill", secKill);
         return "detail";
@@ -54,7 +54,7 @@ public class SeckillController {
     @RequestMapping(value = "/{seckillId}/exposer", method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public SeckillResult<ExposerVO> exposer(Long seckillId) {
+    public SeckillResult<ExposerVO> exposer(@PathVariable("seckillId") Long seckillId) {
         SeckillResult<ExposerVO> result;
         try {
             ExposerVO exposerVO = seckillService.exportSeckillUrl(seckillId);

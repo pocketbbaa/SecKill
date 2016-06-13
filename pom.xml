@@ -8,6 +8,8 @@
     <artifactId>TestKill</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>war</packaging>
+
     <dependencies>
         <!--单元测试-->
         <dependency>
@@ -41,9 +43,9 @@
             <version>5.1.38</version>
         </dependency>
         <dependency>
-            <groupId>com.mchange</groupId>
+            <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.5</version>
+            <version>0.9.1.2</version>
         </dependency>
 
         <!--mybatis-->
@@ -62,45 +64,45 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <!--springDao-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <!--spring web-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <!--spring test-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.0.0.RELEASE</version>
         </dependency>
         <!--servlet-->
         <dependency>
