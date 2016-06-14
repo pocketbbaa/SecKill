@@ -1,11 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!--引入jstl-->
 <%@include file="common/tag.jsp"%>
+<%@include file="common/head.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
     <title>秒杀列表页</title>
-    <%@include file="common/head.jsp"%>
 </head>
 <body>
 
@@ -32,13 +33,13 @@
                                  <td>${sk.name}</td>
                                  <td>${sk.number}</td>
                                  <td>
-                                     <fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:,,:ss"/>
+                                     <fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                  </td>
                                  <td>
-                                     <fmt:formatDate value="${sk.endTime}" pattern="yyyy-MM-dd HH:,,:ss"/>
+                                     <fmt:formatDate value="${sk.endTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                  </td>
                                  <td>
-                                     <fmt:formatDate value="${sk.createtTime}" pattern="yyyy-MM-dd HH:,,:ss"/>
+                                     <fmt:formatDate value="${sk.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                  </td>
                                  <td>
                                      <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank"></a>
