@@ -5,6 +5,7 @@ import exception.RepeatKillException;
 import exception.SeckillCloseException;
 import exception.SeckillException;
 import model.SecKill;
+import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ import vo.ExposerVO;
 import vo.SeckillExecution;
 import vo.SeckillResult;
 
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 
@@ -37,8 +39,12 @@ public class SeckillController {
 
     //根据ID查询秒杀信息
     @RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
-    public String detail(@PathVariable("seckillId") Long seckillId, Model model) {
+    public String detail(@PathVariable("seckillId") Long seckillId, Model model, HttpSession session) {
 
+        /*User user =(User)session.getAttribute("user");
+        if(user == null){
+            return "redirect:/user/toLogin";
+        }*/
         if (seckillId == null) {
             return "redirect:/seckill/list";
         }
@@ -92,6 +98,7 @@ public class SeckillController {
 
     //获取当前时间
     @RequestMapping(value="/time/now",method = RequestMethod.GET)
+    @ResponseBody
     public SeckillResult<Long> time(){
         Date now = new Date();
         return new SeckillResult<Long>(true,now.getTime());

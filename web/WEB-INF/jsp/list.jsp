@@ -42,13 +42,10 @@
                                      <fmt:formatDate value="${sk.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                  </td>
                                  <td>
-                                     <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank"></a>
+                                     <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">进入秒杀</a>
                                  </td>
                              </tr>
                          </c:forEach>
-                    </tbody>
-                    <tbody>
-
                     </tbody>
                 </table>
             </div>
